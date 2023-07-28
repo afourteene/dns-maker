@@ -1,0 +1,16 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	your-domain root.your-domain (
+			      2		; Serial
+			   4800		; Refresh
+			   6400		; Retry
+			2419200		; Expire
+			    800 )	; Negative Cache TTL
+;
+	NS	aleena.ns.cloudflare.com.
+	NS	clark.ns.cloudflare.com.
+www	A	your-ip
+w	CNAME	your-domain
+ww	CNAME	your-domain

@@ -1,0 +1,14 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	rev-ip.in-addr.arpa. root.your-domain (
+			      2		; Serial
+			    4800	; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			    4800 )	; Negative Cache TTL
+;
+	NS	aleena.ns.cloudflare.com.
+	NS	clark.ns.cloudflare.com.
+last	PTR	your-domain

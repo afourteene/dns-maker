@@ -9,8 +9,8 @@ $TTL	604800
 			2419200		; Expire
 			    800 )	; Negative Cache TTL
 ;
-	NS	aleena.ns.cloudflare.com.
-	NS	clark.ns.cloudflare.com.
+	NS	set-your-ns
+	NS	set-your-ns
 www	A	your-ip
 w	CNAME	your-domain
 ww	CNAME	your-domain

@@ -1,6 +1,6 @@
 # Instalation
-###Befor all please install bind server.
-###installation on ubuntu
+## Befor all please install bind server.
+### installation on ubuntu
 ```bash
 sudo apt install bind9 bind9utils 
 ```

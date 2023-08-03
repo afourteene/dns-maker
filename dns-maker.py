@@ -18,9 +18,10 @@ revIpPattern = 'rev-ip'
 zoneFile = open('./files/db.local.txt', 'r')
 revZoneFile = open('./files/rev.db.local.txt', 'r')
 checkIpPattern = '[0-9]+.[0-9]+.[0-9]+.[0-9]+.'
-checkDomainPattern = '[a-zA-Z]+.com.'
+checkDomainPattern = '[a-zA-Z0-9]+.com.|[a-zA-Z0-9]+.[a-zA-Z]+.com.'
 checkRevIpPattern = '[0-9]+.[0-9]+.[0-9]+'
 checkLastpartIp = '[0-9]{3}'
+
 
 def replaceIp(pattern,ip,data):
     setIp = re.sub(pattern,ip,data)
@@ -54,8 +55,13 @@ if(systemArgs[0] == 'zone'):
         print('please check your ip address and domain dictation and retry again.')
 
 elif(systemArgs[0] == 'rev-zone'):
+        
+                     
         domain,revIpAddress = input('entar your domain like this (domain.example.com.) and your rev-ip address please seperate them with a space : ').split()
         lastPartIp = input('enter last part of your ip : ')
+        
+            
+
         fileName = input('enter your file name : ')
         if(re.match(checkLastpartIp,lastPartIp) and re.match(checkRevIpPattern,revIpAddress) and re.match(checkDomainPattern,domain)):
              RevIpWasSet = replaceIp(revIpPattern,revIpAddress,revZoneFile.read())

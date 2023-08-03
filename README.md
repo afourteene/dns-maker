@@ -5,7 +5,7 @@
 sudo apt install bind9 bind9utils 
 ```
 ```bash
-git https://github.com/amirziaee/dns-maker.git
+git clone https://github.com/amirziaee/dns-maker.git
 cd dns-maker
 chmod +x dns-maker.py
 ./dns-maker.py option

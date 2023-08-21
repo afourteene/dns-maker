@@ -1,6 +1,6 @@
 # Instalation
 ## Befor all please install bind server.
-### installation on ubuntu
+### Installation on ubuntu
 ```bash
 sudo apt install bind9 bind9utils 
 ```
@@ -9,7 +9,19 @@ git clone https://github.com/amirziaee/dns-maker.git
 cd dns-maker
 chmod +x dns-maker.py
 ./dns-maker.py option
+cp ./outputs/yourfile-name /etc/bind
 ```
+### Add your file to named-config-default-zone
+```bash
+sudo vim /etc/bind/named.conf.default-zones
+
+zone "your-zone" {
+type master;
+file "/etc/bind/your-file-name";
+};
+```
+
+
 ## Tables
 
 | Option | Description |
